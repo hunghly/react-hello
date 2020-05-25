@@ -19,9 +19,28 @@
 import React from "react";
 import ReactDom from "react-dom";
 
+// This is a component
 function HelloWorld() {
+    let isHello = false;
     return (
-        <div>Hello World!</div>
+        // <span>{isHello ? 'Hello' : 'not Hello'}</span>
+        <span>
+            {isHello && 'Hello'}
+            {!isHello && 'Goodbye'}
+        </span>
+    )
+}
+
+function Hello() {
+    const name = 'World';
+    return (
+        <span>Hello {name}</span> // you can use {} to set expressions
+    )
+}
+
+function World() {
+    return (
+        <span>World!!!</span>
     )
 }
 

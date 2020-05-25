@@ -170,7 +170,7 @@ const Hello = ({fName, lName}) => {
 
 const Person = props => <h1>{props.name + " " + props.age}</h1>
 
-class Parent extends React.Component{
+class Parent extends React.Component {
     state = {
         actionCount: 0
     }
@@ -181,10 +181,10 @@ class Parent extends React.Component{
         })
     }
 
-    render() {
+    render = () => {
         return (
             <div>
-                <Child onAction={this.handleAction()}/>
+                <Child onAction={this.handleAction}/>
                 <p>Clicked {this.state.actionCount} times</p>
             </div>
         )

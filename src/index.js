@@ -112,4 +112,28 @@ const ShareButton = () => {
     return <i className={'fa fa-external-link-alt'}/>
 }
 
-ReactDom.render(<Tweet/>, document.querySelector('#root'));
+function Morgan() {
+    const fName = 'Morgan';
+    const lName = 'McKie';
+
+    return (
+        <Person age={105} name={fName + ' ' + lName}></Person>
+    );
+}
+
+// function Hello(props) {
+//     return (
+//         <span>Hello {props.name}</span>
+//     )
+// }
+
+const Hello = ({fName, lName}) => {
+    return <span>Hello, {fName + " " + lName}</span>
+}
+
+
+const Person = props => <h1>{props.name + " " + props.age}</h1>
+
+ReactDom.render(<Hello fName={"hung"} lName={"ly"}></Hello>, document.querySelector('#root'));
+
+// ReactDom.render(<Tweet/>, document.querySelector('#root'));
